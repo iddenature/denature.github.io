@@ -1,6 +1,7 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-feed"
+group :test do
+  gem "jekyll"
+  gem "html-proofer"
+  gem "rake"
 end

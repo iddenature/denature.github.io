@@ -1,21 +1,45 @@
-# Site settings
-title: de Nature
-header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-copyright_name: Your/Project/Corporate Name
-description: "obat herbal de Nature indonesia terbukti manjur dan harga murah. terima pembelian ecer, reseller, dropshiping"
-baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
-email_username:  your-email@yourdomain.com
-
-# Build settings
+# build
 markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
-gems: [jekyll-paginate, jekyll-feed]
+permalink: /blog/:year/:title/
+exclude:
+  - CNAME
+  - Gemfile
+  - LICENSE
+  - Rakefile
+  - README.md
+  - vendor/
+  - vnu/
+  - vnu.zip
+layouts: ./_noita
+sass:
+  sass_dir: noita/_scss
+  style: compressed
+# compress layout in _noita/compress.html
+compress_html:
+  clippings: all
+  endings: all
+  comments: ["<!--", "-->"]
+  ignore:
+    envs: [travis]
+# theme
+noita:
+  name: Noita
+  description: Jekyll theme built with Foundation
+  author:
+    name: Anatol Broder
+    url: http://penibelst.de/
+  lang: en
+  favicons:
+    - /assets/2014/04/21/favicon-152.png
+  topbar:
+    toggle: Menu
+    right:
+      - name: About
+        url: /about/
+      - name: Guide
+        url: /guide/
+      - name: Blog
+        url: /blog/
+      - name: Repository
+        url: https://github.com/penibelst/jekyll-noita
+        class: small button
